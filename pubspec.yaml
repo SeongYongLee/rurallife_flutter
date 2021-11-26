@@ -84,6 +84,21 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: SpoqaHanSansNeo
+      fonts:
+        - asset: fonts/SpoqaHanSansNeo-Regular.otf
+        - asset: fonts/SpoqaHanSansNeo-Thin.otf
+          weight: 100
+        - asset: fonts/SpoqaHanSansNeo-Light.otf
+          weight: 300
+        - asset: fonts/SpoqaHanSansNeo-Medium.otf
+          weight: 500
+        - asset: fonts/SpoqaHanSansNeo-Bold.otf
+          weight: 700
+    - family: Cafe24Dangdanghae
+      fonts:
+        - asset: fonts/Cafe24Dangdanghae.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
