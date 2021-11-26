@@ -1,22 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:rurallife_flutter/pages/login.dart';
+import 'package:rurallife_flutter/pages/signup.dart';
+import 'rurallife_theme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const RuralLifeApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class RuralLifeApp extends StatelessWidget {
+  const RuralLifeApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final theme = RuralLifeTheme.light();
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        fontFamily: 'SpoqaHanSansNeo',
-      ),
-      home: const Login(),
+      title: 'RuralLife',
+      theme: theme,
+      home: const Signup(),
     );
   }
 }
