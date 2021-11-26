@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:rurallife_flutter/pages/signup.dart';
 import 'package:rurallife_flutter/router/index.dart';
 import 'package:rurallife_flutter/state/app.dart';
 import 'rurallife_theme.dart';

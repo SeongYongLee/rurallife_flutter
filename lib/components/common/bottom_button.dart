@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-class SignupButton extends StatefulWidget {
+class BottomButton extends StatefulWidget {
   final bool disableButton;
+  final Function click;
 
-  const SignupButton({
+  const BottomButton({
     Key? key,
+    required this.click,
     this.disableButton = false,
   }) : super(key: key);
 
   @override
-  _SignupButtonState createState() => _SignupButtonState();
+  _BottomButtonState createState() => _BottomButtonState();
 }
 
-class _SignupButtonState extends State<SignupButton> {
+class _BottomButtonState extends State<BottomButton> {
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -24,7 +26,7 @@ class _SignupButtonState extends State<SignupButton> {
         ),
       ),
       onPressed: () {
-        widget.disableButton ? null : print('goto next page');
+        widget.disableButton ? null : widget.click();
       },
       child: Text('완료'),
     );

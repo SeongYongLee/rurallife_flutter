@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SignupTextField extends StatefulWidget {
+class CustomTextField extends StatefulWidget {
   final Function model;
   final String labelText;
   final String hintText;
 
-  const SignupTextField({
+  const CustomTextField({
     Key? key,
     required this.model,
     required this.labelText,
@@ -13,10 +13,10 @@ class SignupTextField extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SignupTextFieldState createState() => _SignupTextFieldState();
+  _CustomTextFieldState createState() => _CustomTextFieldState();
 }
 
-class _SignupTextFieldState extends State<SignupTextField> {
+class _CustomTextFieldState extends State<CustomTextField> {
   FocusNode _textFieldFocus = FocusNode();
   Color _color = Color(0xFFf7f8f9);
 
