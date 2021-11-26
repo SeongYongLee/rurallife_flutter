@@ -1,0 +1,34 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+// 1
+class MainTab {
+  static const int discovery = 0;
+  static const int search = 1;
+  static const int reservation = 2;
+  static const int my = 3;
+}
+
+class AppStateManager extends ChangeNotifier {
+  bool _initialized = false;
+  int _selectedTab = MainTab.discovery;
+
+  bool get isInitialized => _initialized;
+  int get getSelectedTab => _selectedTab;
+
+  void initializeApp() {
+    Timer(
+      const Duration(milliseconds: 2000),
+      () {
+        _initialized = true;
+        notifyListeners();
+      },
+    );
+  }
+
+  void goToTab(index) {
+    _selectedTab = index;
+    notifyListeners();
+  }
+}

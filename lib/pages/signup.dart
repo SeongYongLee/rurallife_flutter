@@ -1,8 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:rurallife_flutter/components/signup_button.dart';
 import 'package:rurallife_flutter/components/signup_text_field.dart';
+import 'package:rurallife_flutter/router/index.dart';
 
 class Signup extends StatefulWidget {
+  static MaterialPage page() {
+    return MaterialPage(
+      name: Routes.signup,
+      key: ValueKey(Routes.signup),
+      child: const Signup(),
+    );
+  }
+
   const Signup({Key? key}) : super(key: key);
 
   @override
