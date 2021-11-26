@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 class SignupTextField extends StatefulWidget {
+  final Function model;
   final String labelText;
   final String hintText;
 
   const SignupTextField({
     Key? key,
+    required this.model,
     required this.labelText,
     required this.hintText,
   }) : super(key: key);
@@ -46,6 +48,10 @@ class _SignupTextFieldState extends State<SignupTextField> {
         ),
       ),
       focusNode: _textFieldFocus,
+      onChanged: (text) {
+        // 현재 텍스트필드의 텍스트를 출력
+        widget.model(text);
+      },
     );
   }
 }
