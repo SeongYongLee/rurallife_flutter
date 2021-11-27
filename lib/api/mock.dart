@@ -12,12 +12,12 @@ class Mock {
 
     final Map<String, dynamic> json = jsonDecode(dataString);
 
-    if (json['recipes'] != null) {
-      final recipes = <Volunteer>[];
-      json['recipes'].forEach((v) {
-        recipes.add(Volunteer.fromJson(v));
+    if (json['lists'] != null) {
+      final lists = <Volunteer>[];
+      json['lists'].forEach((v) {
+        lists.add(Volunteer.fromJson(v));
       });
-      return recipes;
+      return lists;
     } else {
       return [];
     }

@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:rurallife_flutter/api/mock.dart';
+import 'package:rurallife_flutter/components/home/index.dart';
 import 'package:rurallife_flutter/models/volunteer.dart';
 import 'package:rurallife_flutter/router/index.dart';
 
-class Home extends StatefulWidget {
+class Home extends StatelessWidget {
   static MaterialPage page() {
     return MaterialPage(
       name: Routes.home,
       key: ValueKey(Routes.home),
-      child: const Home(),
+      child: Home(),
     );
   }
 
-  const Home({Key? key}) : super(key: key);
+  Home({Key? key}) : super(key: key);
 
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
   final mock = Mock();
 
   @override
@@ -28,7 +24,7 @@ class _HomeState extends State<Home> {
         future: mock.getVolunteer(),
         builder: (context, AsyncSnapshot<List<Volunteer>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return Text('done');
+            return VolunteerListView(volunteerLists: snapshot.data ?? []);
           } else {
             return const Center(child: CircularProgressIndicator());
           }
