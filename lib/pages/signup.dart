@@ -20,7 +20,7 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
-  int _step = 2;
+  int _step = 0;
 
   void _goSecondStep() {
     setState(() {

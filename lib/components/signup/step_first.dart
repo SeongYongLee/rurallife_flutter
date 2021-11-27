@@ -108,6 +108,7 @@ class _StepFirstState extends State<StepFirst> {
           ],
         ),
         BottomButton(
+          label: '완료',
           click: widget.next,
           disableButton: _disableButton,
         ),

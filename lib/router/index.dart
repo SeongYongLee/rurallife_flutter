@@ -37,6 +37,7 @@ class AppRouter extends RouterDelegate
         if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
           Signup.page(),
         if (appStateManager.isLoggedIn) Home.page()
+        // Home.page()
       ],
     );
   }

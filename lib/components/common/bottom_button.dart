@@ -3,10 +3,12 @@ import 'package:flutter/material.dart';
 class BottomButton extends StatefulWidget {
   final bool disableButton;
   final Function click;
+  final String label;
 
   const BottomButton({
     Key? key,
     required this.click,
+    required this.label,
     this.disableButton = false,
   }) : super(key: key);
 
@@ -28,7 +30,7 @@ class _BottomButtonState extends State<BottomButton> {
       onPressed: () {
         widget.disableButton ? null : widget.click();
       },
-      child: Text('완료'),
+      child: Text(widget.label),
     );
   }
 }
