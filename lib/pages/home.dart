@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:rurallife_flutter/api/mock.dart';
 import 'package:rurallife_flutter/components/home/index.dart';
-import 'package:rurallife_flutter/models/volunteer.dart';
+import 'package:rurallife_flutter/models/town.dart';
 import 'package:rurallife_flutter/router/index.dart';
 
 class Home extends StatelessWidget {
@@ -21,8 +21,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-        future: mock.getVolunteer(),
-        builder: (context, AsyncSnapshot<List<Volunteer>> snapshot) {
+        future: mock.getTown(),
+        builder: (context, AsyncSnapshot<List<Town>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
             return VolunteerListView(volunteerLists: snapshot.data ?? []);
           } else {

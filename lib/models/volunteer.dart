@@ -1,25 +1,22 @@
 class Volunteer {
-  String id;
-  String imageUrl;
-  String location;
   String name;
-  List<String> volunteerList;
+  String birth;
+  String tel;
+  List<String> prefers;
 
   Volunteer({
-    required this.id,
-    required this.imageUrl,
-    required this.location,
     required this.name,
-    required this.volunteerList,
+    required this.birth,
+    required this.tel,
+    required this.prefers,
   });
 
   factory Volunteer.fromJson(Map<String, dynamic> json) {
     return Volunteer(
-      id: json['id'] ?? String,
-      imageUrl: json['imageUrl'] ?? String,
-      location: json['location'] ?? String,
       name: json['name'] ?? String,
-      volunteerList: json['volunteerList'].cast<String>() as List<String>,
+      birth: json['birth'] ?? String,
+      tel: json['tel'] ?? String,
+      prefers: json['prefers'].cast<String>() as List<String>,
     );
   }
 }

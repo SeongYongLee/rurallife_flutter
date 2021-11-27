@@ -64,8 +64,8 @@ flutter:
     - assets/images/signup/
     - assets/images/home/
     - assets/images/bottom_navigation_bar/
-    - assets/images/volunteer_type/
-    - assets/mock/volunteer/
+    - assets/images/volunteer_prefers/
+    - assets/mock/town/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

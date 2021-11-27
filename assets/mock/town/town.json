@@ -1,0 +1,144 @@
+{
+    "towns": [
+        {
+            "id": "1",
+            "name": "남원에서 농활로 벽화그리기",
+            "image_url": "assets/mock/town/0.png",
+            "address_do": "전라북도",
+            "categorys": ["농사 보조", "행사 보조", "육아교육"],
+            "address": "전라북도 남원시 운봉읍 운봉행정길 8-9",
+            "contact": "01012345678",
+            "roomOptions": [
+                "internet",
+                "parking",
+                "convenience",
+                "pet"
+            ],
+            "description": "마을 전체가 제 122호로 지정된 마을로 볼거리가 많고 안락한 숙식을 제공합니다.",
+            "start_date":"2021-11-01",
+            "end_date":"2021-12-25",
+            "activityInfos": [
+                {
+                    "name": "마을회관 벽화그리기",
+                    "activityTime": 5
+                },
+                {
+                    "name": "독거 노인 배달 보조",
+                    "activityTime": 2
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "image_url": "assets/mock/town/1.png",
+            "address_do": "전라북도",
+            "name": "전북에서 진짜 농활 경험하기",
+            "categorys": ["농사 보조", "행사 보조", "육아교육"],
+            "address": "전라북도 남원시 운봉읍 운봉행정길 8-9",
+            "contact": "01012345678",
+            "roomOptions": [
+                "internet",
+                "parking",
+                "convenience",
+                "pet"
+            ],
+            "description": "마을 전체가 제 122호로 지정된 마을로 볼거리가 많고 안락한 숙식을 제공합니다.",
+            "start_date":"2021-11-01",
+            "end_date":"2021-12-25",
+            "activityInfos": [
+                {
+                    "name": "마을회관 벽화그리기",
+                    "activityTime": 5
+                },
+                {
+                    "name": "독거 노인 배달 보조",
+                    "activityTime": 2
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "image_url": "assets/mock/town/2.png",
+            "address_do": "전라북도",
+            "name": "순천에서 농활하고 한옥체험하기",
+            "categorys": ["농사 보조", "행사 보조", "육아교육"],
+            "address": "전라북도 남원시 운봉읍 운봉행정길 8-9",
+            "contact": "01012345678",
+            "roomOptions": [
+                "internet",
+                "parking",
+                "convenience",
+                "pet"
+            ],
+            "description": "마을 전체가 제 122호로 지정된 마을로 볼거리가 많고 안락한 숙식을 제공합니다.",
+            "start_date":"2021-11-01",
+            "end_date":"2021-12-25",
+            "activityInfos": [
+                {
+                    "name": "마을회관 벽화그리기",
+                    "activityTime": 5
+                },
+                {
+                    "name": "독거 노인 배달 보조",
+                    "activityTime": 2
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "image_url": "assets/mock/town/3.png",
+            "address_do": "전라북도",
+            "name": "혼자서도 갈 수 있는 힐링농활",
+            "categorys": ["농사 보조", "행사 보조", "육아교육"],
+            "address": "전라북도 남원시 운봉읍 운봉행정길 8-9",
+            "contact": "01012345678",
+            "roomOptions": [
+                "internet",
+                "parking",
+                "convenience",
+                "pet"
+            ],
+            "description": "마을 전체가 제 122호로 지정된 마을로 볼거리가 많고 안락한 숙식을 제공합니다.",
+            "start_date":"2021-11-01",
+            "end_date":"2021-12-25",
+            "activityInfos": [
+                {
+                    "name": "마을회관 벽화그리기",
+                    "activityTime": 5
+                },
+                {
+                    "name": "독거 노인 배달 보조",
+                    "activityTime": 2
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "image_url": "assets/mock/town/4.png",
+            "address_do": "전라북도",
+            "name": "부산에서 농활하고 저녁엔 바다즐기기",
+            "categorys": ["농사 보조", "행사 보조", "육아교육"],
+            "address": "전라북도 남원시 운봉읍 운봉행정길 8-9",
+            "contact": "01012345678",
+            "roomOptions": [
+                "internet",
+                "parking",
+                "convenience",
+                "pet"
+            ],
+            "description": "마을 전체가 제 122호로 지정된 마을로 볼거리가 많고 안락한 숙식을 제공합니다.",
+            "start_date":"2021-11-01",
+            "end_date":"2021-12-25",
+            "activityInfos": [
+                {
+                    "name": "마을회관 벽화그리기",
+                    "activityTime": 5
+                },
+                {
+                    "name": "독거 노인 배달 보조",
+                    "activityTime": 2
+                }
+            ]
+        }
+    ]
+}

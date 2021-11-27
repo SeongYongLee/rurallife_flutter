@@ -3,7 +3,7 @@ import 'package:rurallife_flutter/components/home/volunteer_tile.dart';
 import 'package:rurallife_flutter/models/index.dart';
 
 class VolunteerListView extends StatelessWidget {
-  final List<Volunteer> volunteerLists;
+  final List<Town> volunteerLists;
 
   const VolunteerListView({
     Key? key,
@@ -19,7 +19,7 @@ class VolunteerListView extends StatelessWidget {
       itemCount: volunteerLists.length,
       itemBuilder: (context, index) {
         final volunteer = volunteerLists[index];
-        return VolunteerTile(volunteer: volunteer);
+        return TownTile(town: volunteer);
       },
     );
   }

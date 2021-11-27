@@ -5,19 +5,19 @@ import 'package:flutter/services.dart';
 import '../models/index.dart';
 
 class Mock {
-  Future<List<Volunteer>> getVolunteer() async {
+  Future<List<Town>> getTown() async {
     await Future.delayed(const Duration(milliseconds: 1000));
 
-    final dataString = await _loadAsset('assets/mock/volunteer/volunteer.json');
+    final dataString = await _loadAsset('assets/mock/town/town.json');
 
     final Map<String, dynamic> json = jsonDecode(dataString);
 
-    if (json['lists'] != null) {
-      final lists = <Volunteer>[];
-      json['lists'].forEach((v) {
-        lists.add(Volunteer.fromJson(v));
+    if (json['towns'] != null) {
+      final towns = <Town>[];
+      json['towns'].forEach((v) {
+        towns.add(Town.fromJson(v));
       });
-      return lists;
+      return towns;
     } else {
       return [];
     }

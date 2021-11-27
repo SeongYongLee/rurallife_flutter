@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:rurallife_flutter/models/index.dart';
 
-class VolunteerTile extends StatelessWidget {
-  final Volunteer volunteer;
+class TownTile extends StatelessWidget {
+  final Town town;
 
-  const VolunteerTile({
+  const TownTile({
     Key? key,
-    required this.volunteer,
+    required this.town,
   }) : super(key: key);
 
   @override
@@ -15,7 +15,7 @@ class VolunteerTile extends StatelessWidget {
       children: [
         Center(
           child: Image.asset(
-            volunteer.imageUrl,
+            town.image_url,
             fit: BoxFit.cover,
             height: 820,
             alignment: new Alignment(-1.0, -1.0),
@@ -45,7 +45,7 @@ class VolunteerTile extends StatelessWidget {
                         children: [
                           Image.asset('assets/images/common/location_icon.png'),
                           Text(
-                            volunteer.location,
+                            town.address_do,
                             style: TextStyle(
                               fontSize: 16.0,
                               color: Colors.white,
@@ -54,7 +54,7 @@ class VolunteerTile extends StatelessWidget {
                         ],
                       ),
                       Text(
-                        volunteer.name,
+                        town.name,
                         style: TextStyle(
                           fontSize: 27.0,
                           color: Colors.white,
@@ -72,7 +72,7 @@ class VolunteerTile extends StatelessWidget {
                   child: Wrap(
                     spacing: 10.0,
                     children: List.generate(
-                      volunteer.volunteerList.length,
+                      town.categorys.length,
                       (index) {
                         return Padding(
                           padding: const EdgeInsets.only(bottom: 8.0),
@@ -85,7 +85,7 @@ class VolunteerTile extends StatelessWidget {
                             ),
                             child: Center(
                               child: Text(
-                                volunteer.volunteerList[index].toString(),
+                                town.categorys[index].toString(),
                                 style: TextStyle(
                                   fontSize: 16.0,
                                   color: Colors.white,
