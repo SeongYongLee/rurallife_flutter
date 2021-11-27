@@ -6,6 +6,7 @@ class Routes {
   static String splash = '/splash';
   static String signup = '/signup';
   static String home = '/home';
+  static String detail = '/detail';
 }
 
 class AppRouter extends RouterDelegate
@@ -29,15 +30,16 @@ class AppRouter extends RouterDelegate
 
   @override
   Widget build(BuildContext context) {
+    print(appStateManager.isDetailPage);
     return Navigator(
       key: navigatorKey,
       onPopPage: _handlePopPage,
       pages: [
-        // if (!appStateManager.isInitialized) Splash.page(),
-        // if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
-        //   Signup.page(),
-        // if (appStateManager.isLoggedIn) Home.page()
-        Home.page()
+        if (!appStateManager.isInitialized) Splash.page(),
+        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+          Signup.page(),
+        Home.page(),
+        if (appStateManager.isDetailPage) Detail.page(),
       ],
     );
   }

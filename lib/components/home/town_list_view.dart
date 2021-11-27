@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:rurallife_flutter/components/home/volunteer_tile.dart';
+import 'package:rurallife_flutter/components/home/town_tile.dart';
 import 'package:rurallife_flutter/models/index.dart';
 
-class VolunteerListView extends StatelessWidget {
-  final List<Town> volunteerLists;
+class TownListView extends StatelessWidget {
+  final List<Town> townLists;
 
-  const VolunteerListView({
+  const TownListView({
     Key? key,
-    required this.volunteerLists,
+    required this.townLists,
   }) : super(key: key);
 
   @override
@@ -16,9 +16,9 @@ class VolunteerListView extends StatelessWidget {
       padding: EdgeInsets.zero,
       primary: true,
       scrollDirection: Axis.vertical,
-      itemCount: volunteerLists.length,
+      itemCount: townLists.length,
       itemBuilder: (context, index) {
-        final volunteer = volunteerLists[index];
+        final volunteer = townLists[index];
         return TownTile(town: volunteer);
       },
     );

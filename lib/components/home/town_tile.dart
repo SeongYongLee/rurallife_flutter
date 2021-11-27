@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rurallife_flutter/models/index.dart';
+import 'package:rurallife_flutter/state/app.dart';
 
 class TownTile extends StatelessWidget {
   final Town town;
@@ -11,6 +13,10 @@ class TownTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    void _goToDetail() async {
+      Provider.of<AppStateManager>(context, listen: false).goToDetail();
+    }
+
     return Stack(
       children: [
         Center(
@@ -124,7 +130,7 @@ class TownTile extends StatelessWidget {
                       ),
                     ),
                     onPressed: () {
-                      print('hi');
+                      _goToDetail();
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

@@ -13,10 +13,12 @@ class MainTab {
 class AppStateManager extends ChangeNotifier {
   bool _initialized = false;
   bool _loggedIn = false;
+  bool _isDetailPage = false;
   int _selectedTab = MainTab.discovery;
 
   bool get isInitialized => _initialized;
   bool get isLoggedIn => _loggedIn;
+  bool get isDetailPage => _isDetailPage;
   int get getSelectedTab => _selectedTab;
 
   void initializeApp() {
@@ -36,6 +38,16 @@ class AppStateManager extends ChangeNotifier {
 
   void goToTab(index) {
     _selectedTab = index;
+    notifyListeners();
+  }
+
+  void goToDetail() {
+    _isDetailPage = true;
+    notifyListeners();
+  }
+
+  void backToHome() {
+    _isDetailPage = false;
     notifyListeners();
   }
 }

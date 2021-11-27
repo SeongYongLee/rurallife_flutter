@@ -1,6 +1,7 @@
 class Town {
   String id;
   String image_url;
+  String image_detail_url;
   String address_do;
   String address;
   String contact;
@@ -15,6 +16,7 @@ class Town {
   Town({
     required this.id,
     required this.image_url,
+    required this.image_detail_url,
     required this.address_do,
     required this.address,
     required this.contact,
@@ -31,6 +33,7 @@ class Town {
     return Town(
       id: json['id'] ?? String,
       image_url: json['image_url'] ?? String,
+      image_detail_url: json['image_detail_url'] ?? String,
       address_do: json['address_do'] ?? String,
       address: json['address'] ?? String,
       contact: json['contact'] ?? String,

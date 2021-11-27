@@ -6,7 +6,7 @@ import '../models/index.dart';
 
 class Mock {
   Future<List<Town>> getTown() async {
-    await Future.delayed(const Duration(milliseconds: 1000));
+    await Future.delayed(const Duration(milliseconds: 0));
 
     final dataString = await _loadAsset('assets/mock/town/town.json');
 

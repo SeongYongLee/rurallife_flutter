@@ -24,7 +24,7 @@ class Home extends StatelessWidget {
         future: mock.getTown(),
         builder: (context, AsyncSnapshot<List<Town>> snapshot) {
           if (snapshot.connectionState == ConnectionState.done) {
-            return VolunteerListView(volunteerLists: snapshot.data ?? []);
+            return TownListView(townLists: snapshot.data ?? []);
           } else {
             return const Center(child: CircularProgressIndicator());
           }
