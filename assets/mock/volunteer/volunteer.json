@@ -1,0 +1,39 @@
+{
+    "feed": [
+        {
+            "id": "1",
+            "imageUrl": "assets/images/mock/0.png",
+            "location": "전라북도",
+            "name": "남원에서 농활로 벽화그리기",
+            "volunteerList": ["농사 보조", "행사 보조", "육아교육"]
+        },
+        {
+            "id": "2",
+            "imageUrl": "assets/images/mock/1.png",
+            "location": "전라북도",
+            "name": "전북에서 진짜 농활 경험하기",
+            "volunteerList": ["농사 보조", "행사 보조", "육아교육"]
+        },
+        {
+            "id": "3",
+            "imageUrl": "assets/images/mock/2.png",
+            "location": "전라북도",
+            "name": "순천에서 농활하고 한옥체험하기",
+            "volunteerList": ["농사 보조", "행사 보조", "육아교육"]
+        },
+        {
+            "id": "4",
+            "imageUrl": "assets/images/mock/3.png",
+            "location": "전라북도",
+            "name": "혼자서도 갈 수 있는 힐링농활",
+            "volunteerList": ["농사 보조", "행사 보조", "육아교육"]
+        },
+        {
+            "id": "5",
+            "imageUrl": "assets/images/mock/4.png",
+            "location": "전라북도",
+            "name": "부산에서 농활하고 저녁엔 바다즐기기",
+            "volunteerList": ["농사 보조", "행사 보조", "육아교육"]
+        }
+    ]
+}

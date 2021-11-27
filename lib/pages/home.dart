@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:rurallife_flutter/api/mock.dart';
+import 'package:rurallife_flutter/models/volunteer.dart';
 import 'package:rurallife_flutter/router/index.dart';
 
 class Home extends StatefulWidget {
@@ -17,15 +19,21 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final mock = Mock();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [const Text('HomePage')],
-        ),
-      ]),
+      body: FutureBuilder(
+        future: mock.getVolunteer(),
+        builder: (context, AsyncSnapshot<List<Volunteer>> snapshot) {
+          if (snapshot.connectionState == ConnectionState.done) {
+            return Text('done');
+          } else {
+            return const Center(child: CircularProgressIndicator());
+          }
+        },
+      ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,

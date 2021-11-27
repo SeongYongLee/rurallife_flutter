@@ -33,11 +33,11 @@ class AppRouter extends RouterDelegate
       key: navigatorKey,
       onPopPage: _handlePopPage,
       pages: [
-        if (!appStateManager.isInitialized) Splash.page(),
-        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
-          Signup.page(),
-        if (appStateManager.isLoggedIn) Home.page()
-        // Home.page()
+        // if (!appStateManager.isInitialized) Splash.page(),
+        // if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+        //   Signup.page(),
+        // if (appStateManager.isLoggedIn) Home.page()
+        Home.page()
       ],
     );
   }
