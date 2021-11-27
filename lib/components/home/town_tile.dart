@@ -49,7 +49,7 @@ class TownTile extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Image.asset('assets/images/common/location_icon.png'),
+                          Image.asset('assets/images/common/location.png'),
                           Text(
                             town.address_do,
                             style: TextStyle(
@@ -103,7 +103,7 @@ class TownTile extends StatelessWidget {
                       },
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),

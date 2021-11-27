@@ -17,12 +17,12 @@ class _StepThirdState extends State<StepThird> {
   List _volunteerSelect = [];
   bool _disableButton = true;
   final List _volunteerType = [
-    {"image": "assets/images/volunteer_type/0.png", "name": "교육 봉사"},
-    {"image": "assets/images/volunteer_type/1.png", "name": "노인 배달 방문"},
-    {"image": "assets/images/volunteer_type/2.png", "name": "요리 보조"},
-    {"image": "assets/images/volunteer_type/3.png", "name": "농사 보조"},
-    {"image": "assets/images/volunteer_type/4.png", "name": "행사 보조"},
-    {"image": "assets/images/volunteer_type/5.png", "name": "다 좋아요"},
+    {"image": "assets/images/volunteer_prefers/0.png", "name": "교육 봉사"},
+    {"image": "assets/images/volunteer_prefers/1.png", "name": "노인 배달 방문"},
+    {"image": "assets/images/volunteer_prefers/2.png", "name": "요리 보조"},
+    {"image": "assets/images/volunteer_prefers/3.png", "name": "농사 보조"},
+    {"image": "assets/images/volunteer_prefers/4.png", "name": "행사 보조"},
+    {"image": "assets/images/volunteer_prefers/5.png", "name": "다 좋아요"},
   ];
 
   void _setDisableButton() {

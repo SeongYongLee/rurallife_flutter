@@ -14,11 +14,13 @@ class AppStateManager extends ChangeNotifier {
   bool _initialized = false;
   bool _loggedIn = false;
   bool _isDetailPage = false;
+  bool _isReservation = false;
   int _selectedTab = MainTab.discovery;
 
   bool get isInitialized => _initialized;
   bool get isLoggedIn => _loggedIn;
   bool get isDetailPage => _isDetailPage;
+  bool get isReservation => _isReservation;
   int get getSelectedTab => _selectedTab;
 
   void initializeApp() {
@@ -41,13 +43,23 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  void backToHome() {
+    _isDetailPage = false;
+    notifyListeners();
+  }
+
   void goToDetail() {
     _isDetailPage = true;
     notifyListeners();
   }
 
-  void backToHome() {
-    _isDetailPage = false;
+  void backToDetail() {
+    _isReservation = false;
+    notifyListeners();
+  }
+
+  void goToReservation() {
+    _isReservation = true;
     notifyListeners();
   }
 }

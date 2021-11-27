@@ -30,16 +30,16 @@ class AppRouter extends RouterDelegate
 
   @override
   Widget build(BuildContext context) {
-    print(appStateManager.isDetailPage);
     return Navigator(
       key: navigatorKey,
       onPopPage: _handlePopPage,
       pages: [
-        if (!appStateManager.isInitialized) Splash.page(),
-        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
-          Signup.page(),
-        Home.page(),
-        if (appStateManager.isDetailPage) Detail.page(),
+        // if (!appStateManager.isInitialized) Splash.page(),
+        // if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+        //   Signup.page(),
+        // if (appStateManager.isLoggedIn) Home.page(),
+        // if (appStateManager.isDetailPage) Detail.page(),
+        Detail.page(),
       ],
     );
   }

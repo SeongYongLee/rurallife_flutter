@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
             icon: Icon(Icons.favorite),
           ),
           BottomNavigationBarItem(
-            label: '검색',
+            label: '농활찾기',
             icon: Icon(Icons.search),
           ),
           BottomNavigationBarItem(

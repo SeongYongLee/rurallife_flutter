@@ -11,7 +11,7 @@ class Town {
   String end_date;
   List<String> roomOptions;
   List<String> categorys;
-  List<String> activityInfos;
+  List activityInfos;
 
   Town({
     required this.id,
@@ -43,7 +43,7 @@ class Town {
       end_date: json['end_date'] ?? String,
       roomOptions: json['roomOptions'].cast<String>() as List<String>,
       categorys: json['categorys'].cast<String>() as List<String>,
-      activityInfos: json['activityInfos'].cast<String>() as List<String>,
+      activityInfos: json['activityInfos'] as List,
     );
   }
 }
