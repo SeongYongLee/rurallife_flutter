@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:rurallife_flutter/pages/signup.dart';
-import 'package:rurallife_flutter/pages/splash.dart';
+import 'package:rurallife_flutter/pages/index.dart';
 import 'package:rurallife_flutter/state/app.dart';
 
 class Routes {
   static String splash = '/splash';
   static String signup = '/signup';
+  static String home = '/home';
 }
 
 class AppRouter extends RouterDelegate
@@ -33,7 +33,10 @@ class AppRouter extends RouterDelegate
       key: navigatorKey,
       onPopPage: _handlePopPage,
       pages: [
-        appStateManager.isInitialized ? Signup.page() : Splash.page(),
+        if (!appStateManager.isInitialized) Splash.page(),
+        if (appStateManager.isInitialized && !appStateManager.isLoggedIn)
+          Signup.page(),
+        if (appStateManager.isLoggedIn) Home.page()
       ],
     );
   }

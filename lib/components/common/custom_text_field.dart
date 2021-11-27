@@ -33,7 +33,9 @@ class _CustomTextFieldState extends State<CustomTextField> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      textAlign: TextAlign.end,
       decoration: InputDecoration(
+        contentPadding: const EdgeInsets.symmetric(vertical: 30.0),
         filled: true,
         fillColor: _color,
         enabledBorder: OutlineInputBorder(
@@ -41,6 +43,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
           borderRadius: BorderRadius.circular(14),
         ),
         labelText: widget.labelText,
+        labelStyle: Theme.of(context).textTheme.subtitle2,
         hintText: widget.hintText,
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(color: Color(0xFFf66e22)),

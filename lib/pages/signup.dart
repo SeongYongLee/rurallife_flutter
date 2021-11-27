@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:rurallife_flutter/components/signup/index.dart';
 import 'package:rurallife_flutter/router/index.dart';
+import 'package:rurallife_flutter/state/app.dart';
 
 class Signup extends StatefulWidget {
   static MaterialPage page() {
@@ -18,18 +20,22 @@ class Signup extends StatefulWidget {
 }
 
 class _SignupState extends State<Signup> {
-  int _step = 0;
+  int _step = 2;
 
-  void _setStepSecond() {
+  void _goSecondStep() {
     setState(() {
       _step = 1;
     });
   }
 
-  void _setStepThird() {
+  void _goThirdStep() {
     setState(() {
       _step = 2;
     });
+  }
+
+  void _onLogin() async {
+    Provider.of<AppStateManager>(context, listen: false).login();
   }
 
   @override
@@ -39,12 +45,14 @@ class _SignupState extends State<Signup> {
         padding: const EdgeInsets.symmetric(vertical: 84.0, horizontal: 24.0),
         child: [
           StepFirst(
-            next: _setStepSecond,
+            next: _goSecondStep,
           ),
           StepSecond(
-            next: _setStepThird,
+            next: _goThirdStep,
           ),
-          Text('third')
+          StepThird(
+            next: _onLogin,
+          ),
         ][_step],
       ),
     );
