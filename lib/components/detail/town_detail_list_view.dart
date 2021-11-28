@@ -63,8 +63,8 @@ class _TownDetailListViewState extends State<TownDetailListView> {
       Provider.of<AppStateManager>(context, listen: false).backToHome();
     }
 
-    void _goToReservation() async {
-      Provider.of<AppStateManager>(context, listen: false).goToReservation();
+    void _goToReserve() async {
+      Provider.of<AppStateManager>(context, listen: false).goToReserve();
     }
 
     return Column(
@@ -582,7 +582,7 @@ class _TownDetailListViewState extends State<TownDetailListView> {
           ),
           child: BottomButton(
             label: '예약하기',
-            click: _goToReservation,
+            click: _goToReserve,
           ),
         ),
       ],

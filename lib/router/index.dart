@@ -7,6 +7,7 @@ class Routes {
   static String signup = '/signup';
   static String home = '/home';
   static String detail = '/detail';
+  static String reserve = '/reserve';
 }
 
 class AppRouter extends RouterDelegate
@@ -39,7 +40,9 @@ class AppRouter extends RouterDelegate
         //   Signup.page(),
         // if (appStateManager.isLoggedIn) Home.page(),
         // if (appStateManager.isDetailPage) Detail.page(),
-        Detail.page(),
+        // if (appStateManager.isReservePage) Reserve.page(),
+        // Splash.page(),
+        Reserve.page(),
       ],
     );
   }

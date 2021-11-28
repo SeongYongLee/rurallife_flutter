@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 class MainTab {
   static const int discovery = 0;
   static const int search = 1;
-  static const int reservation = 2;
+  static const int reserve = 2;
   static const int my = 3;
 }
 
@@ -14,13 +14,13 @@ class AppStateManager extends ChangeNotifier {
   bool _initialized = false;
   bool _loggedIn = false;
   bool _isDetailPage = false;
-  bool _isReservation = false;
+  bool _isReservePage = false;
   int _selectedTab = MainTab.discovery;
 
   bool get isInitialized => _initialized;
   bool get isLoggedIn => _loggedIn;
   bool get isDetailPage => _isDetailPage;
-  bool get isReservation => _isReservation;
+  bool get isReservePage => _isReservePage;
   int get getSelectedTab => _selectedTab;
 
   void initializeApp() {
@@ -54,12 +54,12 @@ class AppStateManager extends ChangeNotifier {
   }
 
   void backToDetail() {
-    _isReservation = false;
+    _isReservePage = false;
     notifyListeners();
   }
 
-  void goToReservation() {
-    _isReservation = true;
+  void goToReserve() {
+    _isReservePage = true;
     notifyListeners();
   }
 }
