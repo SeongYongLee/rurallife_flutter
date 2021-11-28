@@ -31,41 +31,6 @@ class _StepThirdState extends State<StepThird> {
     });
   }
 
-  void FlutterDialog() {
-    showDialog(
-      context: context,
-      //barrierDismissible - Dialog를 제외한 다른 화면 터치 x
-      barrierDismissible: false,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          // RoundedRectangleBorder - Dialog 화면 모서리 둥글게 조절
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-          //Dialog Main Title
-          title: Text("이런..."),
-          //
-          content: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                "최대 3개까지 선택이 가능합니다.",
-              ),
-            ],
-          ),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              child: Text("확인"),
-            )
-          ],
-        );
-      },
-    );
-  }
-
   void _toggleVolunteer(int number) {
     final index = _volunteerSelect.indexOf(number);
 
@@ -75,8 +40,8 @@ class _StepThirdState extends State<StepThird> {
               ? _volunteerSelect = [_volunteerType.length - 1]
               : _volunteerSelect.indexOf(_volunteerType.length - 1) != -1
                   ? _volunteerSelect = [number]
-                  : _volunteerSelect.length == 3
-                      ? FlutterDialog()
+                  : _volunteerSelect.length > 3
+                      ? null
                       : _volunteerSelect.add(number)
           : _volunteerSelect.removeAt(index);
     });

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rurallife_flutter/api/mock.dart';
+import 'package:rurallife_flutter/components/reserve/index.dart';
 import 'package:rurallife_flutter/router/index.dart';
 
 class Reserve extends StatelessWidget {
@@ -21,7 +22,7 @@ class Reserve extends StatelessWidget {
       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.symmetric(vertical: 84.0, horizontal: 24.0),
-        child: Text('Reserve'),
+        child: ReserveConfirm(),
       ),
     );
   }
