@@ -35,7 +35,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return TextField(
       textAlign: TextAlign.end,
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(vertical: 30.0),
+        contentPadding:
+            const EdgeInsets.symmetric(vertical: 30.0, horizontal: 13.0),
         filled: true,
         fillColor: _color,
         enabledBorder: OutlineInputBorder(
@@ -52,7 +53,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
       ),
       focusNode: _textFieldFocus,
       onChanged: (text) {
-        // 현재 텍스트필드의 텍스트를 출력
         widget.model(text);
       },
     );

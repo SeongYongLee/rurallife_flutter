@@ -83,8 +83,8 @@ class _TownDetailListViewState extends State<TownDetailListView> {
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(
-                    horizontal: 24.0,
-                    vertical: 45.0,
+                    horizontal: 16.0,
+                    vertical: 41.0,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -307,7 +307,7 @@ class _TownDetailListViewState extends State<TownDetailListView> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Image.asset(
-                                    'assets/images/detail/person.png',
+                                    'assets/images/detail/calendar.png',
                                     width: 24,
                                     height: 24,
                                   ),
@@ -407,7 +407,7 @@ class _TownDetailListViewState extends State<TownDetailListView> {
                         ),
                       ),
                       SizedBox(
-                        height: 26,
+                        height: 14,
                       ),
                       Image.asset('assets/mock/town/0_map.png'),
                       SizedBox(
@@ -520,7 +520,7 @@ class _TownDetailListViewState extends State<TownDetailListView> {
                         ),
                       ),
                       SizedBox(
-                        height: 8,
+                        height: 12,
                       ),
                       Container(
                         height: 150,
@@ -559,7 +559,7 @@ class _TownDetailListViewState extends State<TownDetailListView> {
                                   Image.asset(
                                       'assets/mock/town/0_travel_2.png'),
                                   SizedBox(height: 12),
-                                  Text("<신생마을>'핑크뮬리'군락지 관광 명소"),
+                                  Text("향전이 주제인 광한루원 건너편 남원관광지"),
                                 ],
                               ),
                             ),

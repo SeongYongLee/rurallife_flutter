@@ -40,7 +40,7 @@ class _StepThirdState extends State<StepThird> {
               ? _volunteerSelect = [_volunteerType.length - 1]
               : _volunteerSelect.indexOf(_volunteerType.length - 1) != -1
                   ? _volunteerSelect = [number]
-                  : _volunteerSelect.length > 3
+                  : _volunteerSelect.length == 3
                       ? null
                       : _volunteerSelect.add(number)
           : _volunteerSelect.removeAt(index);
@@ -61,20 +61,27 @@ class _StepThirdState extends State<StepThird> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '2/2',
-                  style: Theme.of(context).textTheme.headline5,
+                Row(
+                  children: [
+                    Text(
+                      '2',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                      ),
+                    ),
+                    Text(
+                      '/2',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ],
                 ),
-                OutlinedButton(
-                  onPressed: () {
-                    print('건너뛰기');
-                  },
-                  child: Text(
-                    '건너뛰기',
-                  ),
-                )
               ],
             ),
+            SizedBox(height: 13),
             Text(
               '자신있는 봉사활동을',
               style: Theme.of(context).textTheme.headline5,
@@ -137,16 +144,22 @@ class _StepThirdState extends State<StepThird> {
                 },
               ),
             ),
+            SizedBox(
+              height: 5,
+            ),
             Center(
               child: Text(
                 '최대3개선택',
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(
+                  color: Color(0xFFD0D2D4),
+                  fontWeight: FontWeight.bold,
+                ),
               ),
             ),
           ],
         ),
         BottomButton(
-          label: '무전여행 시작 >>',
+          label: '반반농활 시작 >>',
           click: widget.next,
           disableButton: _disableButton,
         ),

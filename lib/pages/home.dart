@@ -33,26 +33,42 @@ class Home extends StatelessWidget {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.white,
-        selectedItemColor: Colors.black,
+        selectedItemColor: Color(0xFFF66E22),
         unselectedItemColor: Colors.black.withOpacity(.60),
-        selectedFontSize: 14,
-        unselectedFontSize: 14,
+        selectedFontSize: 11,
+        unselectedFontSize: 11,
         items: [
           BottomNavigationBarItem(
             label: '발견',
-            icon: Icon(Icons.favorite),
+            icon: Image.asset(
+              'assets/images/bottom_navigation_bar/tab_0_active.png',
+              width: 18,
+              height: 24,
+            ),
           ),
           BottomNavigationBarItem(
             label: '농활찾기',
-            icon: Icon(Icons.search),
+            icon: Image.asset(
+              'assets/images/bottom_navigation_bar/tab_1.png',
+              width: 18,
+              height: 24,
+            ),
           ),
           BottomNavigationBarItem(
             label: '예약',
-            icon: Icon(Icons.airplane_ticket),
+            icon: Image.asset(
+              'assets/images/bottom_navigation_bar/tab_2.png',
+              width: 18,
+              height: 24,
+            ),
           ),
           BottomNavigationBarItem(
             label: '마이',
-            icon: Icon(Icons.person),
+            icon: Image.asset(
+              'assets/images/bottom_navigation_bar/tab_3.png',
+              width: 18,
+              height: 24,
+            ),
           ),
         ],
       ),

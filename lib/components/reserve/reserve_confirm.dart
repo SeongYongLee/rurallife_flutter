@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rurallife_flutter/components/common/bottom_button.dart';
@@ -96,7 +94,9 @@ class _ReserveConfirmState extends State<ReserveConfirm> {
                         borderRadius: BorderRadius.circular(22.0),
                       ),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      _backToDetail();
+                    },
                     child: Text(
                       '수정하기',
                       style: TextStyle(

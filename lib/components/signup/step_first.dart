@@ -59,20 +59,27 @@ class _StepFirstState extends State<StepFirst> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '1/2',
-                  style: Theme.of(context).textTheme.headline5,
+                Row(
+                  children: [
+                    Text(
+                      '1',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSecondary,
+                      ),
+                    ),
+                    Text(
+                      '/2',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                      ),
+                    ),
+                  ],
                 ),
-                OutlinedButton(
-                  onPressed: () {
-                    print('건너뛰기');
-                  },
-                  child: Text(
-                    '건너뛰기',
-                  ),
-                )
               ],
             ),
+            SizedBox(height: 13),
             Text(
               '이름과 생년월일을',
               style: Theme.of(context).textTheme.headline5,
