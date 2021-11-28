@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:rurallife_flutter/state/app.dart';
 
-class CompleteDialog extends StatelessWidget {
+class CompleteDialog extends StatefulWidget {
   const CompleteDialog({
     Key? key,
   }) : super(key: key);
+
+  @override
+  _CompleteDialogState createState() => _CompleteDialogState();
+}
+
+class _CompleteDialogState extends State<CompleteDialog> {
+  void _backToHome() async {
+    Provider.of<AppStateManager>(context, listen: false).backToHome();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +106,10 @@ class CompleteDialog extends StatelessWidget {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    _backToHome();
+                    Navigator.of(context).pop();
+                  },
                   child: Text(
                     '홈으로 가기',
                     style: TextStyle(

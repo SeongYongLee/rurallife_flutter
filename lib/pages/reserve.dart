@@ -21,7 +21,7 @@ class Reserve extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 84.0, horizontal: 24.0),
+        padding: const EdgeInsets.symmetric(vertical: 50.0, horizontal: 24.0),
         child: ReserveConfirm(),
       ),
     );

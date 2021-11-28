@@ -41,7 +41,6 @@ class AppRouter extends RouterDelegate
         // if (appStateManager.isLoggedIn) Home.page(),
         // if (appStateManager.isDetailPage) Detail.page(),
         // if (appStateManager.isReservePage) Reserve.page(),
-        // Splash.page(),
         Reserve.page(),
       ],
     );

@@ -45,6 +45,7 @@ class AppStateManager extends ChangeNotifier {
 
   void backToHome() {
     _isDetailPage = false;
+    _isReservePage = false;
     notifyListeners();
   }
 
